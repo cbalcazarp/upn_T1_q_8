@@ -19,7 +19,7 @@ namespace upn_T1_q_8
             periodo = Convert.ToDouble(Console.ReadLine());
             
             Interes = capital * (tasaInteres/100) * (periodo/12);
-            Console.Write("Interes es: " + Convert.ToString(Interes) + " soles");
+            Console.WriteLine("Interes es: " + Convert.ToString(Interes) + " soles");
 
             montoDevolver = capital + Interes;
             Console.WriteLine("El monto a devolver es: " + Convert.ToString(montoDevolver) + " soles");
