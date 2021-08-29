@@ -6,16 +6,16 @@ namespace upn_T1_q_8
     {
         static void Main(string[] args)
         {
-            Double capital, tasaInteres, periodo, montoDevolver;
+            Double capital, tasaInteres, periodo, montoDevolver, Interes;
             Console.WriteLine("Calculo de interés simple");
             Console.Write("Ingrese capital (soles): ");
             capital = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Ingrese tasaInteres (%): ");
+            Console.Write("Ingrese tasaInteres simple anual (%): ");
             tasaInteres = Convert.ToDouble(Console.ReadLine());
             Console.Write("Ingrese período (meses): ");
             periodo = Convert.ToDouble(Console.ReadLine());
-            tasaInteres = capital*tasaInteres*periodo/1200;
-            montoDevolver = capital + tasaInteres;
+            Interes = capital * (tasaInteres/100) * (periodo/12);
+            montoDevolver = capital + Interes;
             Console.WriteLine("El monto a devolver es: " + Convert.ToString(montoDevolver) + " soles");
 
         }
